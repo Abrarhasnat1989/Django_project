@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{ topic.title }}</h2>
+    <p>{{ topic.content }}</p>
+    <a href="{% url 'update' topic.id %}">Edit</a>
+    <a href="{% url 'delete' topic.id %}">Delete</a>
+    <a href="{% url 'home' %}">Back to Home</a>
+{% endblock %}
